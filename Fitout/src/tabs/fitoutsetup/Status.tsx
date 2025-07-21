@@ -133,17 +133,17 @@ const Status: React.FC = () => {
                            
     
 <div className="overflow-x-auto">
-  <table className="w-full border-collapse text-sm text-center border border-gray-300 rounded-md">
+  <table className="w-full text-sm text-center">
     {/* Table Head */}
     <TableHead columns={columns} />
 
-    <thead className="border border-gray-300 px-2 py-1"
->
-      {showFilters && (
+    {/* Filter Row */}
+    {showFilters && (
+      <thead>
         <tr className="bg-gray-50">
-          <td className="border border-gray-300 px-2 py-1" />
+          <td className="px-2 py-1" />
           {Object.entries(filters).map(([key, value]) => (
-            <td key={key} className="border border-gray-300 px-2 py-1">
+            <td key={key} className="px-2 py-1">
               <TextInput
                 name={key}
                 label=""
@@ -160,9 +160,10 @@ const Status: React.FC = () => {
             </td>
           ))}
         </tr>
-      )}
-    </thead>
+      </thead>
+    )}
 
+    {/* Table Body */}
     <tbody className="bg-white">
       {filteredList.length > 0 ? (
         filteredList.map((row, index) => (
@@ -183,9 +184,7 @@ const Status: React.FC = () => {
     </tbody>
   </table>
 </div>
-
-      
-    </div>
+</div>
   );
 };
 

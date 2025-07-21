@@ -110,91 +110,93 @@ const FitoutChecklist: React.FC = () => {
     <TopHead columns={columns} />
 
     {/* Filter Row */}
-    <thead>
-      {showFilters && (
-        <tr className="bg-gray-50">
-          <td className="border px-2 py-1" />
-          <td className="border px-2 py-1">
-            <TextInput
-              label=""
-              name="name"
-              value={filters.name}
-              onChange={(e) => setFilters({ ...filters, name: e.target.value })}
-              placeholder="Search"
-              className="w-full text-left h-9"
-            />
-          </td>
-          <td className="border px-2 py-1" />
-          <td className="border px-2 py-1">
-            <TextInput
-              label=""
-              name="category"
-              value={filters.category}
-              onChange={(e) => setFilters({ ...filters, category: e.target.value })}
-              placeholder="Search"
-              className="w-full text-left h-9"
-            />
-          </td>
-          <td className="border px-2 py-1">
-            <TextInput
-              label=""
-              name="subcategory"
-              value={filters.subcategory}
-              onChange={(e) => setFilters({ ...filters, subcategory: e.target.value })}
-              placeholder="Search"
-              className="w-full text-left h-9"
-            />
-          </td>
-          <td className="border px-2 py-1">
-            <TextInput
-              label=""
-              name="associations"
-              value={filters.associations}
-              onChange={(e) => setFilters({ ...filters, associations: e.target.value })}
-              placeholder="Search"
-              className="w-full text-left h-9"
-            />
-          </td>
-          <td className="border px-2 py-1">
-            <TextInput
-              label=""
-              name="questionCount"
-              value={filters.questionCount}
-              onChange={(e) => setFilters({ ...filters, questionCount: e.target.value })}
-              placeholder="Search"
-              className="w-full text-center h-9"
-            />
-          </td>
-        </tr>
-      )}
-    </thead>
+  {/* Filter Row */}
+<thead>
+  {showFilters && (
+    <tr className="bg-gray-50 border-b">
+      <td className="px-2 py-1" />
+      <td className="px-2 py-1">
+        <TextInput
+          label=""
+          name="name"
+          value={filters.name}
+          onChange={(e) => setFilters({ ...filters, name: e.target.value })}
+          placeholder="Search"
+          className="w-full text-left h-9"
+        />
+      </td>
+      <td className="px-2 py-1" />
+      <td className="px-2 py-1">
+        <TextInput
+          label=""
+          name="category"
+          value={filters.category}
+          onChange={(e) => setFilters({ ...filters, category: e.target.value })}
+          placeholder="Search"
+          className="w-full text-left h-9"
+        />
+      </td>
+      <td className="px-2 py-1">
+        <TextInput
+          label=""
+          name="subcategory"
+          value={filters.subcategory}
+          onChange={(e) => setFilters({ ...filters, subcategory: e.target.value })}
+          placeholder="Search"
+          className="w-full text-left h-9"
+        />
+      </td>
+      <td className="px-2 py-1">
+        <TextInput
+          label=""
+          name="associations"
+          value={filters.associations}
+          onChange={(e) => setFilters({ ...filters, associations: e.target.value })}
+          placeholder="Search"
+          className="w-full text-left h-9"
+        />
+      </td>
+      <td className="px-2 py-1">
+        <TextInput
+          label=""
+          name="questionCount"
+          value={filters.questionCount}
+          onChange={(e) => setFilters({ ...filters, questionCount: e.target.value })}
+          placeholder="Search"
+          className="w-full text-center h-9"
+        />
+      </td>
+    </tr>
+  )}
+</thead>
 
-    {/* Table Body */}
-    <tbody className="bg-white">
-      {filteredList.length > 0 ? (
-        filteredList.map((item, idx) => (
-          <tr key={item.id} className="hover:bg-gray-50 border-t">
-            <td className="border px-2 py-2 text-center w-12">
-              <FiEye className="cursor-pointer mx-auto" onClick={() => setViewChecklist(true)} />
-            </td>
-            <td className="border px-2 py-2 text-left">{item.name}</td>
-            <td className="border px-2 py-2 text-center w-20">
-              <ToggleSwitch checked={item.status} onChange={() => handleToggle(idx)} />
-            </td>
-            <td className="border px-2 py-2 text-left">{item.category}</td>
-            <td className="border px-2 py-2 text-left">{item.subcategory}</td>
-            <td className="border px-2 py-2 text-left">{item.associations}</td>
-            <td className="border px-2 py-2 text-center w-16">{item.questionCount}</td>
-          </tr>
-        ))
-      ) : (
-        <tr>
-          <td colSpan={columns.length} className="py-4 text-gray-400">
-            No checklist found
-          </td>
-        </tr>
-      )}
-    </tbody>
+{/* Table Body */}
+<tbody className="bg-white">
+  {filteredList.length > 0 ? (
+    filteredList.map((item, idx) => (
+      <tr key={item.id} className="hover:bg-gray-50 border-t">
+        <td className="px-2 py-2 text-center w-12">
+          <FiEye className="cursor-pointer mx-auto" onClick={() => setViewChecklist(true)} />
+        </td>
+        <td className="px-2 py-2 text-left">{item.name}</td>
+        <td className="px-2 py-2 text-center w-20">
+          <ToggleSwitch checked={item.status} onChange={() => handleToggle(idx)} />
+        </td>
+        <td className="px-2 py-2 text-left">{item.category}</td>
+        <td className="px-2 py-2 text-left">{item.subcategory}</td>
+        <td className="px-2 py-2 text-left">{item.associations}</td>
+        <td className="px-2 py-2 text-center w-16">{item.questionCount}</td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan={columns.length} className="py-4 text-gray-400">
+        No checklist found
+      </td>
+    </tr>
+  )}
+</tbody>
+
   </table>
 </div>
     </div>
