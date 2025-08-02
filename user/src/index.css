@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+/* Import PT Sans font */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Global font family */
+* {
+   font-family: "PT Sans", sans-serif;
+}
+
+/* Custom styles for the application */
+.main-content {
+  margin-left: 87px;
+}
+
+.search-input {
+  height: 47px;
+}
+
+.summary-box {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-text {
+  color: #5e5e5e;
+}
+
+.nav-text {
+  color: #5e5e5e;
+}
+
+.form-border {
+  border: 1px solid #cbcbcb;
+  border-radius: 15px;
+}
+
+.input-border {
+  border: 1px solid #cbcbcb;
+}
+
+.form-input {
+  width: 254px;
+  height: 54px;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+}
+
+.form-input::placeholder {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #cbcbcb;
+}
+
+.form-select {
+  width: 254px;
+  height: 54px;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #cbcbcb;
+}
+
+.form-select option {
+  color: #000;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  width: 120px;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5e5e5e;
+  text-align: left;
+}
+
+.additional-info-header {
+  width: 1352px;
+  height: 71px;
+  background-color: #d9d9d9;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 0;
+}
+
+.section-heading {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: black;
+}
+
+.section-content {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.section-border {
+  border-bottom: 1px solid #686868;
+}
+
+.detail-text {
+  color: #686868;
+}
+
+.create-user-btn {
+  background-color: #7991bb;
+  width: 144px;
+  height: 52px;
+  border-radius: 5px;
+  color: white;
+}
+
+.form-collapsed {
+  width: 1353px;
+  height: 791px;
+  border: 1px solid #cbcbcb;
+  border-radius: 15px;
+}
+
+.form-expanded {
+  width: 1353px;
+  height: 1309px;
+  border: 1px solid #cbcbcb;
+  border-radius: 15px;
+}
+
+.table-header {
+  width: 1379.26px;
+  height: 46.92px;
+  border: 1.17px solid #cbcbcb;
+  border-radius: 5.46px;
+  background-color: #f5f5f5;
+}
+
+.table-no-side-borders {
+  border-left: none;
+  border-right: none;
+}
+
+.table-horizontal-only {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #878787;
+}
+
+.radio-button-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.radio-button-group .form-label {
+  width: 120px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+}
+
+.form-row-three {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+}
+
+.form-column {
+  flex: 1;
+  max-width: 400px;
+}
+
+.radio-row-alignment {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.radio-column-1 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.radio-column-2 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.radio-column-3 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.second-row-radio {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.second-row-radio .radio-column-1 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.second-row-radio .radio-column-2 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.second-row-radio .radio-column-3 {
+  flex: 1;
+  max-width: 400px;
+}
+
+.additional-info-container {
+  margin: 0 -32px;
+  padding: 0;
+}
