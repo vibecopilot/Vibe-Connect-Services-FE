@@ -27,7 +27,7 @@ const TableHead: React.FC<TableHeadProps> = ({ columns }) => {
         {columns.map((col, idx) => (
           <th
             key={idx}
-            className={`p-3 text-xs font-semibold text-gray-700 border-b ${getTextAlignClass(col.align)}`}
+            className={`p-3 text-xs font-semibold  ${getTextAlignClass(col.align)}`}
           >
             {col.label}
           </th>
